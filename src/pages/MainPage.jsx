@@ -11,8 +11,8 @@ export default function MainPage() {
 
   return (
     <div className="container-fluid">
-      <section className="border border-black">
-        <div className="buttons mx-2 my-3 border border-danger">
+      <section className="">
+        <div className="buttons mx-2 my-3 ">
           <SubjectButton 
             title="Математика" 
             subjectId="math" 

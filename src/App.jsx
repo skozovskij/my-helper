@@ -13,15 +13,13 @@ import ChemistryThemesPage from "./pages/ChemistryThemesPage";
 function App() {
   return (
     <div>
-
-      <NavBar />
-
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/subjects/math" element={<MathPage />} />
-        <Route path="/subjects/chemistry" element={<ChemistryPage />} />
-        <Route path="/chemistry/:id" element={<ChemistryThemesPage />} />
-      </Routes>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/subjects/math" element={<MathPage />} />
+          <Route path="/subjects/chemistry" element={<ChemistryPage />} />
+          <Route path="/chemistry/:id" element={<ChemistryThemesPage />} />
+        </Routes>
     </div>
   );
 }

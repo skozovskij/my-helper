@@ -18,7 +18,7 @@ const data = [
           { type: "text", text: "Порядок з'єднання атомів у молекулі згідно їх валентності називають органічною будовою." },
           { type: "image", src: "/images/chemistry/organic/1.png", alt: "Органічна будова" },
           { type: "text", text: "Класифікація та номенклатура органічних сполук:" },
-          { type: "image", src: "/images/chemistry/organic/2.png", alt: "Номенклатура органічних сполук" },
+          { type: "image", src: process.env.PUBLIC_URL + "/images/chemistry/organic/2.png", alt: "Номенклатура органічних сполук" },
           { type: "text", text: "З історії органічної хімії" },
           { type: "text", text: "Теорія будови органічних сполук за О.М. Бутлеровим: 1) природа органічної речовини..." }
         ]
@@ -176,7 +176,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/1.png",
+            src: "../images/chemistry/inorganic/1.png",
             alt: "Порядковий номер = кількість протонів = заряд ядра = кількість електронів в атомі.",
             className: "image"
           },
@@ -206,7 +206,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/2.png",
+            src: "../images/chemistry/inorganic/2.png",
             alt: "Період",
             className: "image"
           },
@@ -290,7 +290,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/3.png",
+            src: "../images/chemistry/inorganic/3.png",
             alt: "Період",
             className: "image"
           },
@@ -308,7 +308,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/4.png",
+            src: "../images/chemistry/inorganic/4.png",
             alt: "Період",
             className: "image"
           },
@@ -335,7 +335,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/5.png",
+            src: "../images/chemistry/inorganic/5.png",
             alt: "Період",
             className: "image"
           },
@@ -354,7 +354,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/6.png",
+            src: "../images/chemistry/inorganic/6.png",
             alt: "Період",
             className: "image"
           },
@@ -607,7 +607,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/7.png",
+            src: "../images/chemistry/inorganic/7.png",
             alt: "Типи твердих речовин",
             className: "image"
           },
@@ -669,7 +669,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/8.png",
+            src: "../images/chemistry/inorganic/8.png",
             alt: "Хімічні реакції",
             className: "image"
           },
@@ -682,7 +682,7 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/9.png",
+            src: "../images/chemistry/inorganic/9.png",
             alt: "Хімічні реакції",
             className: "image"
           },
@@ -818,8 +818,8 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/10.jpg",
-            alt: "Хімічні реакції",
+            src: "../images/chemistry/inorganic/10.jpg",
+            alt: "Швидкість реакції",
             className: "image"
           },
           { 
@@ -848,8 +848,8 @@ const data = [
           },
           { 
             type: "image",
-            src: "/images/chemistry/inorganic/11.png",
-            alt: "Хімічні реакції",
+            src: "../images/chemistry/inorganic/11.png",
+            alt: "Швидкість реакції",
             className: "image"
           },
         ]
