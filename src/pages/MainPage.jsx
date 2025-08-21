@@ -28,6 +28,10 @@ export default function MainPage() {
         </div>
 
         <div className="mx-2 my-3">
+          <h1 className="text-center">Вітаємо у Helper!</h1>
+          <p className="text-center">
+            Краще не заходити на сторінку Математика, бо там нічого немає 😅. 
+          </p>
         </div>
       </section>
     </div>
