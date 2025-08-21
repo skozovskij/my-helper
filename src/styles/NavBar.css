@@ -1,0 +1,90 @@
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; 
+  color: white;
+  position: relative;
+}
+
+.navbar-logo a {
+  color: white;
+  font-size: 24px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; 
+}
+
+.navbar-links {
+  display: flex;
+  margin-top: 5px;
+  gap: 15px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    right: 30px;
+    background-color: black;
+    flex-direction: column;
+    width: 85%;
+    border: 1px solid #444;
+    padding: 10px;
+    padding-top: 3px;
+    border-radius: 5px;
+    z-index: 10;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-link {   
+    border-bottom: 1px solid #444;
+  }
+  .math{
+    padding-left: 6px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+  }
+  .chem{
+    padding-top: 0;
+    padding-left: 6px;
+    /* padding-bottom: 6px; ( Розкоментувати коли буде більше предметів ) */
+  }
+
+  .navbar-link:last-child {
+    border-bottom: none;
+  }
+}

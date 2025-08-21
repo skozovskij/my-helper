@@ -1,0 +1,35 @@
+body{
+    background-color: #111;
+    background-image: url('../img/Black_Math_Doshka.jpg');
+    background-size: cover;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+.formula{
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    display: block;
+    margin: 10px 0;
+}
+.rule{
+    color: #ffeb3b;
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin: 15px 0;
+}
+h1,h2,h3{
+    color:#ffeb3b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+a{
+    color: #00bcd4;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.text{
+    text-shadow: 0 0 2px #fff, 0 0 5px rgba(255, 255, 255, 0.5);
+}

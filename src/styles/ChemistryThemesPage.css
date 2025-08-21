@@ -1,0 +1,62 @@
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+.goBack{
+    text-decoration: none;
+}
+.warning{
+    color: red;
+}
+
+.subtopic{
+     margin: 0;
+}
+
+.underTitle{
+    margin-top: 25px;
+}
+@media (max-width: 767px) {
+    .underTitle{
+        margin-top: 25px;
+    }
+}
+
+.list{
+ margin-left: 80px; 
+}
+@media (max-width: 767px) {
+    .list{
+        margin-left: 5px;
+    }
+}
+.noCircle{
+    list-style-type: none;
+}
+
+.image{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+    .image{
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.withNumbers{
+    margin-left: 15px;
+}
+@media (max-width: 767px) {
+    .withNumbers{
+        margin-left: 10px;
+    }
+}
