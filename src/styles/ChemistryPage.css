@@ -18,3 +18,30 @@ p{
     padding-right: 0;
   }
 }
+
+.btn-organic{
+  background-color: #2E2E2E;
+  color: white;
+  border-radius: 5px;
+}
+.btn-organic:hover{
+  background-color: #E63946;
+  color: white;
+}
+
+.btn-inorganic{
+  background-color: #2E2E2E;
+  color: white;
+  border-radius: 5px;
+}
+.btn-inorganic:hover{
+  background-color: #E63946;
+  color: white;
+}
+
+@media (max-width: 767px){
+  .btn{
+    width: 100%;
+    text-align: start;
+  }
+}

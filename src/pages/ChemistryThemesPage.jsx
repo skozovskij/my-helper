@@ -9,7 +9,7 @@ export default function ChemistryThemesPage() {
 
   if (!topic) {
     return (
-      <div className="container mt-4">
+      <div className="container text-center mt-4">
         <h2>Тему не знайдено 😢</h2>
         <Link to="/subjects/chemistry">Назад до всіх тем</Link>
       </div>
@@ -41,7 +41,7 @@ export default function ChemistryThemesPage() {
     );
   };
 
-  // рендер списків (включаючи вкладені)
+  // рендер списків 
   const renderListBlock = (block, key) => {
     const blockClassName = ["mb-3", block.className].filter(Boolean).join(" ");
 

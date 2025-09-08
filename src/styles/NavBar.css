@@ -73,9 +73,14 @@
   .navbar-link {   
     border-bottom: 1px solid #444;
   }
-  .math{
+  .golovna{
     padding-left: 6px;
     padding-top: 10px;
+    padding-bottom: 6px;
+  }
+  .math{
+    padding-top: 0;
+    padding-left: 6px;
     padding-bottom: 6px;
   }
   .chem{

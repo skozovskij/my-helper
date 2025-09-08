@@ -28,7 +28,7 @@ export default function ChemistryPage() {
             <strong>Органічна хімія</strong> - один із найважливіших розділів хімії, який вивчає склад, будову, властивості та реакційну здатність органічних сполук рослинного чи тваринного походження, а також розробку методів синтезу органічних сполук різних класів.
           </p>
           {organicTopics.map(topic => (
-            <Link key={topic.id} to={`/chemistry/${topic.id}`} className="btn btn-primary m-2">
+            <Link key={topic.id} to={`/chemistry/${topic.id}`} className="btn btn-organic m-2">
               {topic.title}
             </Link>
           ))}
@@ -39,7 +39,7 @@ export default function ChemistryPage() {
             <strong>Неорганічна хімія</strong> - природнича наука, яка вивчає матеріальний світ у всьому розмаїтті його існування та перетворень. Вона вивчає склад, будову та властивості неорганічних речовин, умови та шляхи перетворення одних речовин в інші тощо. 
           </p>
           {inorganicTopics.map(topic => (
-            <Link key={topic.id} to={`/chemistry/${topic.id}`} className="btn btn-success m-2">
+            <Link key={topic.id} to={`/chemistry/${topic.id}`} className="btn btn-inorganic m-2">
               {topic.title}
             </Link>
           ))}
