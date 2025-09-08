@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script>
+<script>
+      var redirect = window.location.pathname;
+
       var repo = "/my-helper";
-      var redirect = window.location.pathname + window.location.search + window.location.hash;
+
       if (redirect !== repo + "/") {
         window.location.replace(repo + "/#" + redirect.replace(repo, ""));
       }
     </script>
-  </head>
-  <body>
-    Redirecting to your page...
-  </body>
-</html>
