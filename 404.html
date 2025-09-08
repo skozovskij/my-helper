@@ -6,10 +6,7 @@
     <script>
       var repo = "/my-helper";
       var redirect = window.location.pathname + window.location.search + window.location.hash;
-
-      // Якщо користувач не на головній сторінці
       if (redirect !== repo + "/") {
-        // Редірект на HashRouter версію того ж шляху
         window.location.replace(repo + "/#" + redirect.replace(repo, ""));
       }
     </script>
