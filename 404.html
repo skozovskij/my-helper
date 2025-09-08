@@ -4,14 +4,11 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      var redirect = window.location.pathname;
-
-      var repo = "/my-helper";
-
-      if (redirect !== repo + "/") {
+        var repo = "/my-helper";
+        var redirect = window.location.pathname;
         window.location.replace(repo + "/#" + redirect.replace(repo, ""));
-      }
     </script>
+
   </head>
   <body>
     Redirecting...
