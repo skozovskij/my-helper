@@ -4,20 +4,14 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Базовий шлях до репозиторію
+      var redirect = window.location.pathname;
       var repo = "/my-helper";
-
-      // Поточний шлях, який хотів відкрити користувач
-      var redirect = window.location.pathname + window.location.search + window.location.hash;
-
-      // Якщо користувач не на головній сторінці
       if (redirect !== repo + "/") {
-        // Редірект на HashRouter версію того ж шляху
         window.location.replace(repo + "/#" + redirect.replace(repo, ""));
       }
     </script>
   </head>
   <body>
-    Redirecting to your page...
+    Redirecting...
   </body>
 </html>
