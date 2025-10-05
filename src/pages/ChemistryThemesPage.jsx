@@ -1,4 +1,3 @@
-// src/pages/ChemistryThemesPage.jsx
 import { useParams, Link } from "react-router-dom";
 import data from "../data/chemistry.js";
 import "../styles/ChemistryThemesPage.css";
@@ -16,7 +15,6 @@ export default function ChemistryThemesPage() {
     );
   }
 
-  // універсальний рендер частини тексту
   const renderTextPart = (part, key) => {
     if (typeof part === "string") return part;
 
@@ -28,7 +26,6 @@ export default function ChemistryThemesPage() {
     );
   };
 
-  // рендер текстового блоку
   const renderTextBlock = (block, key) => {
     const blockClassName = ["mb-3", block.className].filter(Boolean).join(" ");
 
@@ -41,7 +38,6 @@ export default function ChemistryThemesPage() {
     );
   };
 
-  // рендер списків 
   const renderListBlock = (block, key) => {
     const blockClassName = ["mb-3", block.className].filter(Boolean).join(" ");
 
@@ -77,7 +73,6 @@ export default function ChemistryThemesPage() {
     );
   };
 
-  // універсальний рендер блоків
   const renderBlock = (block, i) => {
     switch (block.type) {
       case "text":

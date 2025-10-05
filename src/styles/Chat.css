@@ -1,0 +1,95 @@
+.widget {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 50;
+}
+
+.window {
+    width: 320px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #3b82f6;
+    color: white;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.close-chat:hover {
+    color: rgb(240, 93, 93); 
+}
+
+.toggle-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #3b82f6; 
+    border: none;
+    color: white;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.toggle-button:hover {
+    background-color: #2563eb;
+    border: none;
+}
+
+.chatWindow {
+    padding: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.chat {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f9fafb;
+}
+
+.input-field {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+.SendButton {
+    width: 50px;
+    background-color: #3b82f6; 
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.SendButton:hover {
+    background-color: #2563eb; 
+}
