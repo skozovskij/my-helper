@@ -11,7 +11,6 @@ export default function ChatBot() {
     // Референс для автоматичної прокрутки вікна чату
     const messagesEndRef = useRef(null);
 
-    // 💡 ОНОВЛЕНО: Твоя НОВА URL-адреса бекенду!
     const BACKEND_DOMAIN = "https://my-helper-server-clear.netlify.app"; 
 
     // Прокрутка вниз при оновленні повідомлень
