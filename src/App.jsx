@@ -17,7 +17,6 @@ import ChemistryThemesPage from "./pages/ChemistryThemesPage";
 function App() {
   return (
     <MathJaxContext>
-      <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path="/" element={<MainPage />} />
@@ -27,7 +26,6 @@ function App() {
           <Route path="/chemistry/:id" element={<ChemistryThemesPage />} />
         </Routes>
         <ChatBot />
-      </BrowserRouter>
     </MathJaxContext>
   );
 }
