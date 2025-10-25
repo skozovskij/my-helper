@@ -27,18 +27,6 @@ export default function MathPage() {
             ))}
           </article>
 
-          <h2 className="text-center mt-3">Арифметика</h2>
-          <article className="arithmetic mx-2">
-            {arithmeticTopics.map(topic => (
-              <Link
-                key={topic.id}
-                to={`/math/${topic.id}`}
-                className="btn btn-success m-2"
-              >
-                {topic.title}
-              </Link>
-            ))}
-          </article>
         </section>
       </div>
 

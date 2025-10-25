@@ -1,5 +1,7 @@
 import { useParams, Link } from "react-router-dom";
-import data from "../data/chemistry.js";
+import { MathJax } from "better-react-mathjax";
+import data from "../data/chemistry";
+import QuizComponent from "../components/QuizComponent";
 import "../styles/ChemistryThemesPage.css";
 
 export default function ChemistryThemesPage() {
@@ -73,6 +75,7 @@ export default function ChemistryThemesPage() {
     );
   };
 
+  // --- ОСНОВНА ФУНКЦІЯ РЕНДЕРИНГУ БЛОКІВ ---
   const renderBlock = (block, i) => {
     switch (block.type) {
       case "text":
@@ -110,6 +113,11 @@ export default function ChemistryThemesPage() {
           </p>
         );
       }
+      // --- ДОДАНО НОВИЙ CASE ---
+      case "quiz": {
+        return <QuizComponent key={i} questions={block.questions} />;
+      }
+      // -------------------------
       default:
         return null;
     }
@@ -121,7 +129,9 @@ export default function ChemistryThemesPage() {
 
       {topic.subtopics?.map((sub, subIdx) => (
         <div key={subIdx} className="mb-4">
-          <h2>{sub.title}</h2>
+          {/* H2 рендериться тут */}
+          <h2>{sub.title}</h2> 
+          {/* А тут рендеряться блоки контенту, включно з тестом */}
           {sub.contentBlocks?.map(renderBlock)}
         </div>
       ))}
@@ -132,3 +142,4 @@ export default function ChemistryThemesPage() {
     </div>
   );
 }
+
