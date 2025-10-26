@@ -52,7 +52,6 @@ function SubscriptionPage() {
           </div>
         </div>
 
-        {/* Картка "Premium" */}
         <div className="col-md-5 mb-4">
           <div className="card h-100 shadow-sm border-success">
             <div className="card-header bg-success text-white text-center">
