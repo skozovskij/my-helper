@@ -75,7 +75,6 @@ export default function ChemistryThemesPage() {
     );
   };
 
-  // --- ОСНОВНА ФУНКЦІЯ РЕНДЕРИНГУ БЛОКІВ ---
   const renderBlock = (block, i) => {
     switch (block.type) {
       case "text":
@@ -113,11 +112,9 @@ export default function ChemistryThemesPage() {
           </p>
         );
       }
-      // --- ДОДАНО НОВИЙ CASE ---
       case "quiz": {
         return <QuizComponent key={i} questions={block.questions} />;
       }
-      // -------------------------
       default:
         return null;
     }
@@ -129,9 +126,7 @@ export default function ChemistryThemesPage() {
 
       {topic.subtopics?.map((sub, subIdx) => (
         <div key={subIdx} className="mb-4">
-          {/* H2 рендериться тут */}
-          <h2>{sub.title}</h2> 
-          {/* А тут рендеряться блоки контенту, включно з тестом */}
+          <h2>{sub.title}</h2>
           {sub.contentBlocks?.map(renderBlock)}
         </div>
       ))}

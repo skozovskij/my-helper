@@ -9,6 +9,12 @@ const renderFormulaText = (text) => {
     }
     let content = part.substring(1, part.length - 1);
 
+    content = content.replace(/\\rightarrow/g, '→');
+    content = content.replace(/\\leftrightarrow/g, '↔');
+    content = content.replace(/\\leftarrow/g, '←');
+    content = content.replace(/\\uparrow/g, '↑');
+    content = content.replace(/\\downarrow/g, '↓'); 
+
     const elements = content.split(/(\^\{[^\}]+\}|\_\{[^\}]+\}|\^[^\s\{]|\_[^\s\{]|\S)/g).filter(Boolean);
 
     return (

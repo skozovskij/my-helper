@@ -48,30 +48,243 @@ const mathData = [
           }
         ]
       },
-     
-
-      
-    ]
-  },
-  {
-    id: 2,
-    type: "arithmetic",
-    title: "Ознаки подільності",
-    subtopics: [
       {
-        title: "Таблиця ознак",
+        title: "1.4 Порядок дій у виразі",
         contentBlocks: [
           {
             type: "table",
-            headers: ["Число", "Ознака", "Приклад"],
+            headers: ["Ступінь", "Дії"],
             rows: [
-              ["2", "Остання цифра парна", "124, 786"],
-              ["3", "Сума цифр ділиться на 3", "123, 576"],
-              ["5", "Остання цифра 0 або 5", "35, 120"]
+              [
+                { bold: true, value: "IV", style: { verticalAlign: "middle" } },
+                {
+                  value: [
+                    {
+                      type: "math",
+                      value: "(...); \\sqrt[...]{...}; (...)^{...}; \\log_{...}{...}; \\sin(...); \\cos(...); tg(...); ctg(...); |...|; \\dots",
+                    },
+                  ],
+                },
+              ],
+              [
+                { bold: true, value: "III", style: { verticalAlign: "middle" } },
+                {
+                  value: [
+                    {
+                      type: "math",
+                      value: "\\sqrt[a]{b}; (a)^b; \\log_a b; \\sin(a); \\cos(a); tg(a); ctg(a); |a|;",
+                    },
+                  ],
+                },
+              ],
+              [
+                { bold: true, value: "II", style: { verticalAlign: "middle" } },
+                {
+                  value: [
+                    {
+                      type: "math",
+                      value: "... : ...; \\frac{a}{b};",
+                    },
+                  ],
+                },
+              ],
+              [
+                { bold: true, value: "I", style: { verticalAlign: "middle" } },
+                {
+                  value: [
+                    {
+                      type: "math",
+                      value: "+; -;",
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        ],
+      },
+      {
+        title: "1.5 Властивості додавання",
+        contentBlocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              {
+                value: [
+                  { type: "math", value: "a+b=b+a" },
+                  " – переставна властивість",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "(a+b)+c=a+(b+c)" },
+                  " – сполучна властивість",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "a+0=a" },
+                  " – властивість нуля",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "a+(-a)=0" },
+                  " – властивість протилежних чисел",
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "1.6 Властивості множення",
+        contentBlocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              {
+                value: [
+                  { type: "math", value: "a \\cdot b = b \\cdot a" },
+                  " – переставна властивість",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "(a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)" },
+                  " – сполучна властивість",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "(a+b) \\cdot c = a \\cdot c + b \\cdot c" },
+                  " – розподільна властивість",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "a \\cdot 0 = 0" },
+                  " – властивість нуля",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "a \\cdot 1 = a" },
+                  " – властивість одиниці",
+                ],
+              },
+              {
+                value: [
+                  { type: "math", value: "a \\cdot \\frac{1}{a} = 1" },
+                  " – властивість обернених чисел",
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "1.7 Модуль",
+        contentBlocks: [
+          {
+            type: "formula",
+            formula: "|a| = \\begin{cases} a, & \\text{якщо } a \\ge 0 \\\\ -a, & \\text{якщо } a < 0 \\end{cases}",
+          },
+        ],
+      },
+      {
+        "title": "Перевір себе: Тест з теми",
+        "contentBlocks": [
+          {
+            "type": "quiz",
+            "questions": [
+              {
+                "question": "Яке з наведених чисел ділиться на 3, але НЕ ділиться на 9?",
+                "options": [
+                  "189",
+                  "549",
+                  "123",
+                  "909"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Обчисліть, дотримуючись порядку дій: 10 + 4 * 2^3",
+                "options": [
+                  "112",
+                  "42",
+                  "54",
+                  "104"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "Яке з цих чисел НЕ є простим?",
+                "options": [
+                  "13",
+                  "17",
+                  "23",
+                  "21"
+                ],
+                "correctAnswerIndex": 3
+              },
+              {
+                "question": "Чому дорівнює вираз: |-15| + |7 - 10| ?",
+                "options": [
+                  "18",
+                  "12",
+                  "22",
+                  "-18"
+                ],
+                "correctAnswerIndex": 0
+              },
+              {
+                "question": "Як називається властивість a * (b + c) = a * b + a * c?",
+                "options": [
+                  "Сполучна",
+                  "Переставна",
+                  "Розподільна",
+                  "Властивість одиниці"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Яке число ділиться на 6?",
+                "options": [
+                  "123",
+                  "244",
+                  "576",
+                  "105"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "До якої множини чисел належить -5, але НЕ належить 1/3?",
+                "options": [
+                  "N (Натуральні)",
+                  "Z (Цілі)",
+                  "Q (Раціональні)",
+                  "(Ірраціональні)"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "Який запис демонструє сполучну властивість додавання?",
+                "options": [
+                  "a+b=b+a",
+                  "(a+b)+c=a+(b+c)",
+                  "a+0=a",
+                  "a+(-a)=0"
+                ],
+                "correctAnswerIndex": 1
+              }
             ]
           }
         ]
       }
+      
     ]
   }
 ];
