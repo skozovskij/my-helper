@@ -1,6 +1,8 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import '../styles/SubscriptionPage.css';
+
 
 function SubscriptionPage() {
   const { subscription, upgradeSubscription, isAuthenticated, user } = useAuth();
@@ -8,79 +10,150 @@ function SubscriptionPage() {
 
   const handleUpgrade = (plan) => {
     if (!isAuthenticated) {
-      alert('Будь ласка, увійдіть, щоб оновити підписку.');
+      console.warn('Будь ласка, увійдіть, щоб оновити підписку.');
       navigate('/login');
     } else {
+      console.log(`Оновлення до ${plan}`);
       upgradeSubscription(plan);
     }
   };
 
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-8 text-center">
-          <h2 className="mb-4">Наші тарифи</h2>
-          {user && <p className="lead mb-4">Вітаємо, {user.email}!</p>}
-          <p className="lead mb-4">
-            Ваш поточний тариф: <strong className="text-primary text-uppercase">{subscription}</strong>
-          </p>
-        </div>
-      </div>
-
-      <div className="row mt-4 justify-content-center">
-        <div className="col-md-5 mb-4">
-          <div className="card h-100 shadow-sm">
-            <div className="card-body d-flex flex-column">
-              <h3 className="card-title text-center">Тариф "Pro"</h3>
-              <p className="card-text text-center text-muted">Повний доступ до всіх формул та матеріалів з Математики та Хімії.</p>
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">✅ Всі теми з Математики</li>
-                <li className="list-group-item">✅ Всі теми з Хімії</li>
-                <li className="list-group-item text-muted">❌ Без ШІ-помічника</li>
-              </ul>
-              <div className="mt-auto text-center pt-3">
-                <button 
-                  className="btn btn-primary btn-lg w-100"
-                  onClick={() => handleUpgrade('pro')} 
-
-                  disabled={subscription === 'pro' || subscription === 'premium'}
-                >
-                  {subscription === 'pro' ? 'Ваш тариф' : (subscription === 'premium' ? 'Включено у Premium' : 'Отримати Pro')}
-                </button>
-              </div>
-            </div>
-          </div>
+    <>
+      <div className="subscription-page">
+    <div className="page-container">
+        
+        <div className="header-section">
+            <h2>Наші тарифи для успішного навчання</h2>
+            {user && (
+                <p className="user-greeting">
+                    Вітаємо, {user.email}!
+                </p>
+            )}
+            <p className="current-plan-text">
+                Ваш поточний тариф: 
+                <strong className="current-plan-badge">{subscription}</strong>
+            </p>
         </div>
 
-        <div className="col-md-5 mb-4">
-          <div className="card h-100 shadow-sm border-success">
-            <div className="card-header bg-success text-white text-center">
-              Найкращий вибір
-            </div>
-            <div className="card-body d-flex flex-column">
-              <h3 className="card-title text-center">Тариф "Premium"</h3>
-              <p className="card-text text-center text-muted">Все з "Pro", а також доступ до персонального ШІ-помічника (ChatBot).</p>
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">✅ Всі теми з Математики</li>
-                <li className="list-group-item">✅ Всі теми з Хімії</li>
-                <li className="list-group-item">✅ Доступ до ШІ-помічника</li>
-              </ul>
-              <div className="mt-auto text-center pt-3">
-                <button 
-                  className="btn btn-success btn-lg w-100"
-                  onClick={() => handleUpgrade('premium')}
-                  disabled={subscription === 'premium'}
-                >
-                  {subscription === 'premium' ? 'Ваш тариф' : 'Отримати Premium'}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="pricing-grid">
 
-      </div>
+            <div className="plan-card">
+                <div className="plan-header">
+                    <h3>"Free"</h3>
+                    <p className="plan-price">
+                        <span className="price-value">Безкоштовно</span>
+                    </p>
+                    <p>Базовий доступ для ознайомлення з нашою платформою.</p>
+                </div>
+                
+                <ul className="features-list">
+                    <li>
+                        <span className="icon-check">✅</span>
+                        <span>Каталог усіх тем</span>
+                    </li>
+                    <li className="feature-disabled">
+                        <span className="icon-cross">❌</span>
+                        <span>Доступ до тестів</span>
+                    </li>
+                    <li className="feature-disabled">
+                        <span className="icon-cross">❌</span>
+                        <span>AI-асистент</span>
+                    </li>
+                </ul>
+                
+                <div className="plan-footer">
+                    <button 
+                        className="btn-sub btn-default"
+                        disabled
+                    >
+                        {subscription === 'free' ? 'Ваш поточний тариф' : 'Спробувати безкоштовно'}
+                    </button>
+                </div>
+            </div>
+
+            <div className="plan-card">
+                <div className="plan-header">
+                    <h3>"Standard"</h3>
+                    <p className="plan-price">
+                        <span className="price-value">$10</span> / міс.
+                    </p>
+                    <p>Повний контент з обох предметів та базовий AI-помічник.</p>
+                </div>
+                
+                <ul className="features-list">
+                    <li>
+                        <span className="icon-check">✅</span>
+                        <span>Доступ до тестів</span>
+                    </li>
+                    <li>
+                        <span className="icon-check check-limited">✅</span> 
+                        <span>AI-асистент (до 30 запитів/день)</span>
+                    </li>
+                    <li className="feature-disabled">
+                        <span className="icon-cross">❌</span>
+                        <span>Потужна AI-модель</span>
+                    </li>
+                </ul>
+                
+                <div className="plan-footer">
+                  <p className="small-text">Економія 20% при оплаті за рік</p>
+                    <button 
+                        className="btn-sub btn-pro"
+                        onClick={() => handleUpgrade('pro')}
+                        disabled={subscription === 'standard' || subscription === 'premium'}
+                    >
+                        {subscription === 'standard' ? 'Ваш тариф' : (subscription === 'premium' ? 'Включено' : 'Обрати Standard')}
+                    </button>
+                    
+                </div>
+            </div>
+
+            <div className="plan-card plan-card--premium">
+                <span className="badge">
+                    НАЙКРАЩИЙ ВИБІР
+                </span>
+                
+                <div className="plan-header plan-header--premium">
+                    <h3>"Premium"</h3>
+                    <p className="plan-price">
+                         <span className="price-value">$20</span> / міс.
+                    </p>
+                    <p>Необмежений кількість запитів до AI та персоналізація для найкращих результатів.</p>
+                </div>
+                
+                <ul className="features-list">
+                    <li>
+                        <span className="icon-check">✅</span>
+                        <span>Необмежена кількість запитів до AI-асистента</span>
+                    </li>
+                    <li>
+                        <span className="icon-check">✅</span>
+                        <span>Потужна AI-модель</span>
+                    </li>
+                    <li>
+                        <span className="icon-check">✅</span>
+                        <span>Більше тестів та аналітика прогресу</span>
+                    </li>
+                </ul>
+                
+                <div className="plan-footer">
+                    <button 
+                        className="btn-sub btn-premium"
+                        onClick={() => handleUpgrade('premium')}
+                        disabled={subscription === 'premium'}
+                    >
+                        {subscription === 'premium' ? 'Ваш тариф' : 'Підключити Premium'}
+                    </button>
+                </div>
+            </div>
+
+        </div>
     </div>
+</div>
+    </>
   );
 }
 
 export default SubscriptionPage;
+
